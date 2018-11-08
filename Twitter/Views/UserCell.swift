@@ -68,7 +68,7 @@ class UserCell:DatasourceCell{
     
     let twitterButton : UIImageView = {
         let image = UIImageView()
-        image.image = UIImage(named: "mario")
+        image.image = UIImage(named: "follow")
         image.layer.cornerRadius = 5
         image.layer.masksToBounds = true
         image.contentMode = .scaleAspectFit
@@ -81,6 +81,7 @@ class UserCell:DatasourceCell{
         backgroundColor = UIColor.white
         
         separatorLineView.isHidden = false
+        separatorLineView.backgroundColor = UIColor(white: 0, alpha: 0.1)
         addSubview(profileImageView)
         addSubview(nameLabel)
         addSubview(userName)

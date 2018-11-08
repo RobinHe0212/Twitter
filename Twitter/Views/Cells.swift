@@ -20,7 +20,10 @@ class HeaderCell : DatasourceCell{
     }()
     override func setupViews() {
         super.setupViews()
+        backgroundColor = .white
         separatorLineView.isHidden = false
+        separatorLineView.backgroundColor = UIColor(white: 0, alpha: 0.1)
+
         addSubview(textLabel)
         textLabel.fillSuperview()
     }
@@ -33,6 +36,7 @@ class FooterCell : DatasourceCell{
         let label = UILabel()
         label.text = "Show me more"
         label.font = UIFont.systemFont(ofSize: 16)
+        label.textColor = UIColor(r: 61, g: 167, b: 244)
         return label
         
     }()
@@ -40,7 +44,13 @@ class FooterCell : DatasourceCell{
         
         
         super.setupViews()
+        let whiteBackgroundView = UIView()
+        whiteBackgroundView.backgroundColor = .white
+        addSubview(whiteBackgroundView)
+        whiteBackgroundView.anchor(topAnchor, left: leftAnchor, bottom: bottomAnchor, right: rightAnchor, topConstant: 0, leftConstant: 0, bottomConstant: 14, rightConstant: 0, widthConstant: 0, heightConstant: 0)
         separatorLineView.isHidden = false
+        separatorLineView.backgroundColor = UIColor(white: 0, alpha: 0.1)
+
         addSubview(textLabel)
         textLabel.fillSuperview()
     }
