@@ -12,9 +12,9 @@ class HomeDataSource : Datasource {
     let users : [User] = {
         let user0 = User(name:"RobinHe", userName:"@Robinhe0212", bioText:"I like reading",profileImage:"profile")
         let user1 = User(name:"Troydan", userName:"@TroydanGaming", bioText:"Angry for no reason. Youtuber or something. I play video game basketball. Email: troydan@gmail.com", profileImage: "troydan")
-       
+       let user2 = User(name: "Sneaker News", userName: "@SneakerNews", bioText: "The Authority in Sneaker News.", profileImage: "sneaker")
         
-        return [user0,user1]
+        return [user0,user1,user2]
         
     }()
     
