@@ -10,6 +10,8 @@ import LBTAComponents
 
 class UserCell:DatasourceCell{
     
+    
+    
     override var datasourceItem: Any?{
         didSet{
             guard let item = datasourceItem as? User else{
@@ -54,17 +56,21 @@ class UserCell:DatasourceCell{
     }()
     
     let subButton : UIButton = {
-        let button = UIButton()
+        let button = UIButton(type: .system)
+        
         let twitterBlue = UIColor(r: 61, g: 167, b: 244)
         button.layer.cornerRadius = 5
         button.layer.borderColor = twitterBlue.cgColor
         button.layer.borderWidth = 1
         button.setTitle("Follow", for: .normal)
         button.setTitleColor(twitterBlue, for: .normal)
+        
         button.titleLabel?.font = UIFont.boldSystemFont(ofSize: 14)
         button.titleEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: -25)
         return button
     }()
+    
+    
     
     let twitterButton : UIImageView = {
         let image = UIImageView()
